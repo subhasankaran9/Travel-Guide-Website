@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- HTML Forms -->
+
+    <section class="form">
+        <h2>User Info</h2>
+      <form action="https://httpbin.org/get" method="get">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          autofocus
+          placeholder="Name"
+        />
+
+        <br /><br />
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required />
+
+        <br /><br />
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+
+        <br /><br />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+
+        <br /><br />
+        <label for="phone">Phone:</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          required
+          pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+        />
+
+        <br /><br />
+        <button type="submit">Submit (GET)</button>
+        <!-- USing Post method to submit form -->
+        <button type="submit"
+          formmethod="post"
+          formaction="https://httpbin.org/post"
+        >
+          Submit(POST)
+        </button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </body>
+</html>
